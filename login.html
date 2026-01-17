@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <h2>Inicio de sesión</h2>
+
+        <div id="alerta" class="alert d-none" role="alert"></div>
+        <form action="">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingresar Email">
+        </div>
+        <div class="form-group">
+            <label for="password">Constraseña:</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresar contraseña">
+        </div> 
+        <button type="submit" class="btn btn-primary" onclick="login(event);">Login</button>
+
+        </form>
+       
+
+    </div>
+
+    <script src="wallet.js"></script>
+</body>
+</html>

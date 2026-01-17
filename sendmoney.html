@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetera - Realizar Transferencias</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Enviar dinero</h2>
+        <form>
+            <div class="form-group">
+                <label for="searchContact">Buscar en la agenda de transferencias</label>
+                <input type="text" class="form-control" id="searchContact" placeholder="Buscar contacto">
+                <button type="button" class="btn btn-primary" id="btnContact">Buscar</button>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="abrirFormulario()">Agregar nuevo contacto</button>
+
+            <div id="nuevoContactoForm" style="display: none" class="list-group-item">
+                <h4>Nuevo contacto</h4>
+                <div class="form-group">
+                    <label>Nombre y apellido:</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label>Número de cuenta:</label>
+                    <input type="number" class="form-control" id="ncta">
+                </div>
+                 <div class="form-group">
+                    <label>Alias</label>
+                    <input type="text" class="form-control" id="alias">
+                </div>
+                 <div class="form-group">
+                    <label>Banco</label>
+                    <input type="text" class="form-control" id="banco">
+                </div>
+
+                 <div id="alerta-contacto" class="alert d-none" role="alert"></div>
+
+                <button type="button" class="btn btn-primary" onclick="guardarContacto()">Guardar contacto</button>
+                <button type="button" class="btn btn-secondary" onclick="cerrarFormulario()">Cancelar</button>
+
+            </div>
+
+
+        <h3>Contactos</h3>
+        <ul id="contactList" class="list-group mb-3"></ul>
+        <div class="form-group">
+            <label>Monto a transferir</label>
+            <input type="number" id="monto" class="form-control">
+        </div>
+        <div id="alerta-transferencia" class="alert d-none" role="alert"></div>
+        <button type="button" class="btn btn-primary" onclick="transferencia()">Transferir dinero</button>
+        </form>
+        <a href="menu.html" class="btn btn-secondary">Volver al Menú principal</a>
+
+    </div>
+    
+    <script src="wallet.js"> </script>
+    
+    <script>
+        cargarContacto();
+    </script>
+    
+</body>
+</html>

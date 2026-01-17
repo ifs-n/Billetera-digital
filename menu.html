@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Menú Billetera</h2>
+        <div class="form-group">
+          <label for="balance">Dinero en cuenta:</label>
+          <h3 id="saldo"></h3>
+        </div>
+        <a href="deposit.html" class="btn btn-primary">Depositar</a>
+        <a href="sendmoney.html" class="btn btn-primary">Enviar Dinero</a>
+        <a href="transactions.html" class="btn btn-primary">Últimos Movimientos</a>
+        <a href="login.html" class="btn btn-danger">Cerrar Sesión</a>
+        
+    </div>
+  
+    <script src="wallet.js"></script>
+    <script>
+      mostrarSaldo();
+    </script>
+</body>
+</html>
